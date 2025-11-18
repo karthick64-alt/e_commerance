@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products • ShopSphere</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-nav">
+    <div class="logo"><a href="index.html">ShopSphere</a></div>
+    <nav>
+      <a href="index.html#home">Home</a>
+      <a href="home-saas.html">SaaS Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="account.html">Account</a>
+      <a href="support.html">Support</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search products">
+      <button id="searchBtn">Search</button>
+      <div class="search-suggestions" id="searchSuggestions"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="slide active">
+        <h1>All Products</h1>
+        <p>Filter, sort and find the right items from thousands of listings.</p>
+        <button>Browse Collections</button>
+      </div>
+    </section>
+
+    <section class="plp">
+      <aside class="filters">
+        <h3>Filters</h3>
+        <label>Price
+          <input type="range" min="0" max="5000" value="800" id="priceRange">
+          <div class="price-range">
+            <span>$0</span>
+            <span id="priceValue">$800</span>
+            <span>$5000</span>
+          </div>
+        </label>
+        <label>Brand
+          <select>
+            <option>All</option>
+            <option>Brand A</option>
+            <option>Brand B</option>
+            <option>Brand C</option>
+          </select>
+        </label>
+        <label>Rating
+          <select>
+            <option>4★ & above</option>
+            <option>3★ & above</option>
+            <option>2★ & above</option>
+          </select>
+        </label>
+        <label>Color
+          <input type="color" value="#ff0000">
+        </label>
+        <label>Size
+          <select>
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+        </label>
+        <button class="clear-filters">Clear All Filters</button>
+      </aside>
+      <div class="product-list-container">
+        <div class="product-list-header">
+          <div>
+            <span class="results-count">Showing 24 products</span>
+          </div>
+          <select class="sort-select">
+            <option>Sort by: Popularity</option>
+            <option>Price: Low → High</option>
+            <option>Price: High → Low</option>
+            <option>Latest</option>
+            <option>Rating</option>
+          </select>
+        </div>
+        <div class="product-list grid-view" id="productList"></div>
+        <div class="pagination">
+          <button disabled>‹ Prev</button>
+          <span class="active">1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <button>Next ›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="related">
+      <h2>Quick Filters</h2>
+      <div class="payment-options">
+        <span>Best Sellers</span>
+        <span>Flash Deals</span>
+        <span>New Arrivals</span>
+        <span>Under $50</span>
+        <span>Free Shipping</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <h3>Quick Links</h3>
+      <a href="index.html#home">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="products.html">Products</a>
+    </div>
+    <div>
+      <h3>Policies</h3>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Returns Policy</a>
+    </div>
+    <div>
+      <h3>Stay Connected</h3>
+      <div class="social">
+        <span>FB</span>
+        <span>IG</span>
+        <span>YT</span>
+      </div>
+      <form class="newsletter">
+        <input type="email" placeholder="Subscribe to newsletter">
+        <button>Subscribe</button>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

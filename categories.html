@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories • ShopSphere</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-nav">
+    <div class="logo"><a href="index.html">ShopSphere</a></div>
+    <nav>
+      <a href="index.html#home">Home</a>
+      <a href="home-saas.html">SaaS Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="account.html">Account</a>
+      <a href="support.html">Support</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search categories">
+      <button id="searchBtn">Search</button>
+      <div class="search-suggestions" id="searchSuggestions"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="slide active">
+        <h1>Explore Everything</h1>
+        <p>Browse curated collections across every lifestyle need.</p>
+        <button>Discover</button>
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2>Main Categories</h2>
+      <p>Browse our wide range of product categories</p>
+      <div class="category-grid">
+        <article>
+          <span class="category-icon"></span>
+          <h3>Electronics</h3>
+          <p>Mobiles, laptops, audio gear & accessories.</p>
+          <span class="category-count">1,234 items</span>
+        </article>
+        <article>
+          <span class="category-icon"></span>
+          <h3>Fashion</h3>
+          <p>Top trends for men, women and kids.</p>
+          <span class="category-count">856 items</span>
+        </article>
+        <article>
+          <span class="category-icon"></span>
+          <h3>Home & Living</h3>
+          <p>Furniture, décor and kitchen upgrades.</p>
+          <span class="category-count">642 items</span>
+        </article>
+        <article>
+          <span class="category-icon"></span>
+          <h3>Beauty & Wellness</h3>
+          <p>Skincare, makeup and grooming picks.</p>
+          <span class="category-count">423 items</span>
+        </article>
+        <article>
+          <span class="category-icon"></span>
+          <h3>Health & Fitness</h3>
+          <p>Health supplements, vitamins and fitness equipment.</p>
+          <span class="category-count">321 items</span>
+        </article>
+        <article>
+          <span class="category-icon"></span>
+          <h3>Sports & Outdoors</h3>
+          <p>Workout apparel, equipment and gear.</p>
+          <span class="category-count">567 items</span>
+        </article>
+        
+      </div>
+    </section>
+
+    <section class="sub-categories">
+      <h2>Popular Sub-Categories</h2>
+      <div class="account-grid">
+        <article>
+          <span class="sub-category-icon"></span>
+          <h3>Mobiles</h3>
+          <p>Android, iOS, accessories</p>
+        </article>
+        <article>
+          <span class="sub-category-icon"></span>
+          <h3>Wearables</h3>
+          <p>Smartwatches, fitness bands</p>
+        </article>
+        <article>
+          <span class="sub-category-icon"></span>
+          <h3>Footwear</h3>
+          <p>Sneakers, formal, athleisure</p>
+        </article>
+        <article>
+          <span class="sub-category-icon"></span>
+          <h3>Kitchen Pro</h3>
+          <p>Appliances, cookware, serveware</p>
+        </article>
+        <article>
+          <span class="sub-category-icon"></span>
+          <h3>Personal Care</h3>
+          <p>Haircare, grooming, spa kits</p>
+        </article>
+        <article>
+          <span class="sub-category-icon"></span>
+          <h3>Grocery & Gourmet</h3>
+          <p>Everyday essentials and artisanal finds.</p>
+        </article>
+        <article>
+          <span class="sub-category-icon"></span>
+          <h3>Books & Stationery</h3>
+          <p>Bestsellers, art supplies</p>
+        </article>
+        <article>
+          <span class="sub-category-icon"></span>
+          <h3>Toys & Games</h3>
+          <p>Action figures, board games, puzzles</p>
+        </article>
+        <article>
+          <span class="sub-category-icon"></span>
+          <h3>Sports & Outdoors</h3>
+          <p>Workout apparel, equipment and gear.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="plp">
+      <aside class="filters">
+        <h3>Refine by Filters</h3>
+        <label>Price
+          <input type="range" min="0" max="2000" value="500">
+        </label>
+        <label>Brand
+          <select>
+            <option>All</option>
+            <option>Brand A</option>
+            <option>Brand B</option>
+          </select>
+        </label>
+        <label>Rating
+          <select>
+            <option>4★ & above</option>
+            <option>3★ & above</option>
+          </select>
+        </label>
+        <label>Color
+          <input type="color" value="#000000">
+        </label>
+        <label>Size
+          <select>
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+        </label>
+        <h3>Sort By</h3>
+        <select>
+          <option>Popularity</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Latest</option>
+        </select>
+      </aside>
+      <div class="product-list" id="categoryList"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <h3>Quick Links</h3>
+      <a href="index.html#home">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="products.html">Products</a>
+    </div>
+    <div>
+      <h3>Policies</h3>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Returns Policy</a>
+    </div>
+    <div>
+      <h3>Stay Connected</h3>
+      <div class="social">
+        <span>FB</span>
+        <span>IG</span>
+        <span>YT</span>
+      </div>
+      <form class="newsletter">
+        <input type="email" placeholder="Subscribe to newsletter">
+        <button>Subscribe</button>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

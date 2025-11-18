@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commeres Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-nav">
+    <div class="logo"><a href="index.html">ShopSphere</a></div>
+    <nav>
+      <a href="index.html#home" class="active">Home</a>
+      <a href="home-saas.html">SaaS Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="account.html">Account</a>
+      <a href="support.html">Support</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for products">
+      <button id="searchBtn">Search</button>
+      <div class="search-suggestions" id="searchSuggestions"></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-slider" id="heroSlider">
+        <div class="slide active">
+          <h1>Biggest Festive Sale</h1>
+          <p>Up to 70% off on electronics</p>
+          <button>Shop Now</button>
+        </div>
+        <div class="slide">
+          <h1>New Arrivals</h1>
+          <p>Trendy apparel for everyone</p>
+          <button>Explore</button>
+        </div>
+        <div class="slide">
+          <h1>Flash Deals</h1>
+          <p>Limited time offers every day</p>
+          <button>Grab Deals</button>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+      <div class="slider-indicators">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+
+    <section class="brand-strip">
+      <h2>Brand Partners</h2>
+      <div class="brand-logos">
+        <span>Apple</span>
+        <span>Nike</span>
+        <span>Samsung</span>
+        <span>Adidas</span>
+        <span>Sony</span>
+        <span>Zara</span>
+      </div>
+    </section>
+
+    <section class="featured" id="featured">
+      <h2>Featured Products</h2>
+      <div class="product-grid" id="featuredGrid"></div>
+    </section>
+
+    <section class="categories" id="categories">
+      <h2>Shop by Category</h2>
+      <p>Browse our wide range of product categories</p>
+      <div class="category-grid">
+        <article>
+          <h3>Electronics</h3>
+          <p>Mobiles, Laptops, Accessories</p>
+        </article>
+        <article>
+          <h3>Fashion</h3>
+          <p>Men, Women, Kids</p>
+        </article>
+        <article>
+          <h3>Home & Living</h3>
+          <p>Furniture, Décor, Kitchen</p>
+        </article>
+        <article>
+          <h3>Beauty</h3>
+          <p>Skincare, Makeup, Wellness</p>
+        </article>
+        <article>
+          <h3>Sports</h3>
+          <p>Fitness, Outdoor, Gear</p>
+        </article>
+        <article>
+          <h3>Grocery</h3>
+          <p>Daily essentials & gourmet</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="deals">
+      <div>
+        <h2>Today’s Deals</h2>
+        <p>Limited time flash sales refreshed daily.</p>
+        <button>View Deals</button>
+      </div>
+      <div>
+        <h2>Top Selling</h2>
+        <p>Our most-loved products of the week.</p>
+        <button>See Top Picks</button>
+      </div>
+      <div>
+        <h2>New Arrivals</h2>
+        <p>Fresh styles and latest launches.</p>
+        <button>Discover</button>
+      </div>
+    </section>
+
+    <section id="plp" class="plp">
+      <aside class="filters">
+        <h3>Filters</h3>
+        <label>Price
+          <input type="range" min="0" max="2000" value="500">
+        </label>
+        <label>Brand
+          <select>
+            <option>All</option>
+            <option>Brand A</option>
+            <option>Brand B</option>
+          </select>
+        </label>
+        <label>Rating
+          <select>
+            <option>4★ & above</option>
+            <option>3★ & above</option>
+          </select>
+        </label>
+        <label>Color
+          <input type="color" value="#000000">
+        </label>
+        <label>Size
+          <select>
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+        </label>
+        <h3>Sort By</h3>
+        <select>
+          <option>Popularity</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Latest</option>
+        </select>
+      </aside>
+      <div class="product-list" id="productList"></div>
+    </section>
+
+    <section id="pdp" class="pdp">
+      <div class="gallery">
+        <img src="https://via.placeholder.com/400" alt="Product">
+        <div class="thumbnails">
+          <img src="https://via.placeholder.com/80" alt="">
+          <img src="https://via.placeholder.com/80" alt="">
+          <img src="https://via.placeholder.com/80" alt="">
+        </div>
+      </div>
+      <div class="details">
+        <h2>Smartphone Pro Max</h2>
+        <p class="price">$899 <span class="strike">$999</span></p>
+        <p class="desc">Next-gen smartphone with AI camera and 5G.</p>
+        <div class="actions">
+          <label>Quantity
+            <input type="number" min="1" value="1">
+          </label>
+          <button>Add to Cart</button>
+          <button class="ghost">Buy Now</button>
+        </div>
+        <div class="meta">
+          <h3>Specifications</h3>
+          <ul>
+            <li>6.7" OLED Display</li>
+            <li>128 GB Storage</li>
+            <li>Triple Camera</li>
+          </ul>
+        </div>
+        <div class="reviews">
+          <h3>Reviews & Ratings</h3>
+          <p>⭐️⭐️⭐️⭐️☆ (124 reviews)</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="related">
+      <h2>Related Products</h2>
+      <div class="product-grid" id="relatedGrid"></div>
+    </section>
+
+    <section id="cart" class="cart">
+      <h2>Your Cart</h2>
+      <div class="cart-items">
+        <article>
+          <div>
+            <h3>Wireless Headphones</h3>
+            <p>$199</p>
+          </div>
+          <div class="qty">
+            <button>-</button>
+            <input type="number" value="1">
+            <button>+</button>
+          </div>
+        </article>
+      </div>
+      <div class="coupon">
+        <input type="text" placeholder="Apply Coupon">
+        <button>Apply</button>
+      </div>
+      <div class="summary">
+        <p>Subtotal: $199</p>
+        <p>Shipping: $10</p>
+        <p>Taxes: $12</p>
+        <p class="total">Total: $221</p>
+      </div>
+    </section>
+
+    <section id="checkout" class="checkout">
+      <h2>Checkout</h2>
+      <div class="checkout-grid">
+        <div>
+          <h3>Login</h3>
+          <button>Continue as Guest</button>
+          <button>Login</button>
+
+          <h3>Shipping Information</h3>
+          <input type="text" placeholder="Full Name">
+          <input type="text" placeholder="Address">
+          <input type="text" placeholder="City">
+
+          <h3>Billing Address</h3>
+          <label><input type="checkbox"> Same as shipping</label>
+
+          <h3>Payment Options</h3>
+          <div class="payments">
+            <label><input type="radio" name="pay" checked> Card</label>
+            <label><input type="radio" name="pay"> UPI</label>
+            <label><input type="radio" name="pay"> COD</label>
+            <label><input type="radio" name="pay"> Wallet</label>
+          </div>
+        </div>
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <p>Items: $221</p>
+          <p>Shipping: $10</p>
+          <p>Discount: -$15</p>
+          <p class="total">Total: $216</p>
+          <button>Place Order</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="account" class="account">
+      <h2>User Account</h2>
+      <div class="account-grid">
+        <article>
+          <h3>Login / Register</h3>
+          <p>Access your profile and manage orders.</p>
+        </article>
+        <article>
+          <h3>My Orders</h3>
+          <p>Track purchases and download invoices.</p>
+        </article>
+        <article>
+          <h3>Wishlist</h3>
+          <p>Save products for later.</p>
+        </article>
+        <article>
+          <h3>Addresses</h3>
+          <p>Manage shipping locations.</p>
+        </article>
+        <article>
+          <h3>Payment Methods</h3>
+          <p>Securely store cards & wallets.</p>
+        </article>
+        <article>
+          <h3>Returns & Refunds</h3>
+          <p>Submit and track requests.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wishlist" id="wishlist">
+      <h2>Wishlist</h2>
+      <div class="wishlist-items">
+        <article>
+          <img src="https://via.placeholder.com/200x200?text=Smart+Watch" alt="Smart Watch">
+          <div>
+            <h3>Smart Watch</h3>
+            <p class="cart-price">$149</p>
+            <div class="actions">
+              <button>Move to Cart</button>
+              <button class="ghost">Remove</button>
+            </div>
+          </div>
+        </article>
+        <article>
+          <img src="https://via.placeholder.com/200x200?text=Wireless+Earbuds" alt="Wireless Earbuds">
+          <div>
+            <h3>Wireless Earbuds</h3>
+            <p class="cart-price">$89</p>
+            <div class="actions">
+              <button>Move to Cart</button>
+              <button class="ghost">Remove</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="order-tracking">
+      <h2>Track Your Order</h2>
+      <input type="text" placeholder="Enter Order ID">
+      <button>Track Order</button>
+      <p>Status: Shipped • Expected Delivery: 2 days</p>
+    </section>
+
+    <section class="admin">
+      <h2>Admin Dashboard</h2>
+      <div class="admin-grid">
+        <article>Product Management</article>
+        <article>Category Management</article>
+        <article>Order Management</article>
+        <article>User Management</article>
+        <article>Coupon Management</article>
+        <article>Inventory Control</article>
+        <article>Sales Reports</article>
+        <article>Banner Management</article>
+      </div>
+    </section>
+
+    <section class="payments">
+      <h2>Payments Integration</h2>
+      <div class="payment-options">
+        <span>Razorpay</span>
+        <span>Stripe</span>
+        <span>Cash on Delivery</span>
+        <span>Wallets</span>
+        <span>UPI</span>
+        <span>Netbanking</span>
+      </div>
+    </section>
+
+    <section id="contact" class="support">
+      <h2>Customer Support</h2>
+      <div class="support-grid">
+        <article>
+          <h3>Chat Support</h3>
+          <button>Start Chat</button>
+        </article>
+        <article>
+          <h3>FAQ</h3>
+          <button>View FAQs</button>
+        </article>
+        <article>
+          <h3>Contact Form</h3>
+          <input type="text" placeholder="Your Email">
+          <textarea placeholder="Message"></textarea>
+          <button>Send</button>
+        </article>
+        <article>
+          <h3>Returns & Refunds</h3>
+          <button>Submit Request</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <h3>Quick Links</h3>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Blog</a>
+    </div>
+    <div>
+      <h3>Policies</h3>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Returns Policy</a>
+    </div>
+    <div>
+      <h3>Stay Connected</h3>
+      <div class="social">
+        <span>FB</span>
+        <span>IG</span>
+        <span>YT</span>
+      </div>
+      <form class="newsletter">
+        <input type="email" placeholder="Subscribe to newsletter">
+        <button>Subscribe</button>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
